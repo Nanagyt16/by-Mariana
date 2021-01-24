@@ -29,9 +29,11 @@ function formatDate(date) {
     document.querySelector("#city").innerHTML= response.data.name ;
     document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
     document.querySelector("#humidity").innerHTML = Math.round(response.data.main.humidity);
-    document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
-  document.querySelector("#description").innerHTML = response.data.weather[0].main;
+    document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed)
+    let iconElement=document.querySelector("#icon");
+    iconElement.setAttribute( "src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}10d@2x.png`);
   }
+    
   function searchCity(city){
     
     let apiKey = "9ea4abf30ce31c32866690108912edb4"
@@ -77,3 +79,4 @@ function formatDate(date) {
   let currentLocationButton = document.querySelector("#current-location-button");
   currentLocationButton.addEventListener("click",getCurrentLocation);
   searchCity("Lviv");
+  
