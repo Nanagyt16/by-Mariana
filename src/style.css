@@ -1,5 +1,5 @@
 body{
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Source Serif Pro', serif;
     background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 
 }
@@ -22,8 +22,8 @@ li{
     line-height: 1;
     list-style: none;
 } 
-.weather.app {
-    border: 1px solid #ffff;
+.weather-app {
+    border: 1px solid #dadde1;
     padding: 12px;
     margin: 24px auto ;
     border-radius: 10px;
