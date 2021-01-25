@@ -24,21 +24,27 @@ function formatDate(date) {
   let dateElement = document.querySelector("#date");
   let currentTime = new Date();
   dateElement.innerHTML = formatDate(currentTime);
+
   
   function  displayWeatherConditions(response){
     document.querySelector("#city").innerHTML= response.data.name ;
     document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
     document.querySelector("#humidity").innerHTML = Math.round(response.data.main.humidity);
-    document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed)
-    let iconElement=document.querySelector("#icon");
-    iconElement.setAttribute( "src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}10d@2x.png`);
-  }
+    document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
+  document.querySelector("#icon").setAttribute( "src",
+  `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+);
+iconElement.setAttribute("alt", response.data.weather[0].description);
+}
+
+  
     
   function searchCity(city){
     
     let apiKey = "9ea4abf30ce31c32866690108912edb4"
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherConditions);
+ 
   }
   function handleSubmit(event) {
     event.preventDefault();
