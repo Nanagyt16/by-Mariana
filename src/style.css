@@ -5,9 +5,9 @@ body{
 }
 h1{
     color: #2b2b2b;
-    font-size: 31px;
-    font-weight: 150;
-    line-height: 35px;
+    font-size: 25px;
+    font-weight: 85;
+    line-height: 25px;
     margin:0;
 }
 ul{
@@ -24,15 +24,15 @@ li{
 } 
 .weather-app {
     border: 1px solid #dadde1;
-    padding: 12px;
-    margin: 24px auto ;
-    border-radius: 10px;
-    max-width: 550px ;
+    padding: 24px;
+    margin: 48px auto ;
+    border-radius: 20px;
+    max-width: 800px ;
 }
 .temperature {
     color:#1565c0;
-    font-size: 75px;
-    font-weight: 300;
+    font-size: 50px;
+    font-weight: 150;
     line-height: 1;
 
 }
@@ -41,11 +41,11 @@ li{
         top: -34px;
       }
 
-.fas.fa-cloud-sun {
-    color:#1565c0;
-    font-size :75px;
-    height: 64px;
-    
+.icon{
+    position: relative; 
+    top: -24px;
 }
+    
+
 
 
