@@ -28,6 +28,7 @@ function formatDate(date) {
   
   function  displayWeatherConditions(response){
     document.querySelector("#city").innerHTML= response.data.name ;
+    document.querySelector("#description").innerHTML = response.data.weather[0].description;
     document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
     document.querySelector("#humidity").innerHTML = Math.round(response.data.main.humidity);
     document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
@@ -35,6 +36,8 @@ function formatDate(date) {
   `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
 );
 iconElement.setAttribute("alt", response.data.weather[0].description);
+
+
 }
 
   
